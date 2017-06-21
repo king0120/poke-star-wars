@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621201604) do
+ActiveRecord::Schema.define(version: 20170621204402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "fights", force: :cascade do |t|
+    t.bigint "pokemon_id"
+    t.bigint "star_war_id"
+    t.string "winner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_fights_on_pokemon_id"
+    t.index ["star_war_id"], name: "index_fights_on_star_war_id"
+  end
+
+  create_table "pokemons", force: :cascade do |t|
+    t.string "name"
+    t.string "image_url"
+    t.integer "height"
+    t.integer "weight"
+    t.integer "wins"
+    t.integer "losses"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "star_wars", force: :cascade do |t|
+    t.string "name"
+    t.integer "height"
+    t.integer "weight"
+    t.integer "wins"
+    t.integer "losses"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +63,6 @@ ActiveRecord::Schema.define(version: 20170621201604) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "fights", "pokemons"
+  add_foreign_key "fights", "star_wars"
 end

@@ -1,0 +1,2 @@
+class StarWar < ApplicationRecord
+end

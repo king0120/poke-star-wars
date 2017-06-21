@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pokemon: one
+  star_war: one
+  winner: MyString
+
+two:
+  pokemon: two
+  star_war: two
+  winner: MyString
