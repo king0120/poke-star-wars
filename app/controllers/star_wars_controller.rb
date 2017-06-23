@@ -1,0 +1,2 @@
+class StarWarsController < ApplicationController
+end
