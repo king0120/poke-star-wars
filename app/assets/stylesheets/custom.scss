@@ -39,3 +39,24 @@
   margin-bottom: 15px;
   padding: 7px 9px;
 }
+
+h1{
+  text-align: center;
+}
+.fighters{
+  display: flex;
+  justify-content: space-around;
+  .pokemon{
+    img{
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .star-wars{
+    img{
+      height: 200px;
+      width: 200px;
+    }
+
+  }
+}
