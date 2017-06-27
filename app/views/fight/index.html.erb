@@ -1,0 +1,32 @@
+<h1>WHO WOULD WIN?</h1>
+
+<div class="fighters">
+    <div class="pokemon">
+        <%= image_tag @pokemon[:image] %>
+        <h3><%= @pokemon[:name] %></h3>
+        <%= button_to "Pokemon", [:new_pokemon, @pokemon]%>
+    </div>
+
+    <div class="star-wars">
+        <%= image_tag @star_wars[:image]%>
+        <h3><%= @star_wars[:name]%></h3>
+        <p><%= @star_wars[:height]%></p>
+        <p><%= @star_wars[:weight]%></p>
+        <%= button_to "Star Wars", [:new_pokemon, @pokemon]%>
+    </div>
+</div>
+
+
+
+
+
+<%= @star_wars%>
+
+
+
+
+
+
+
+<%#<%= @pokemon%>
+<%#<%= @star_wars  %>
